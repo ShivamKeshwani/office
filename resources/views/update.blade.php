@@ -39,7 +39,7 @@
         <div class="row mt-4">
             <div class="form-group col-sm-6">
                 <label for="">Name</label>
-                <input type="text" name="name" class="form-control" >
+                <input type="text" name="name" class="form-control" value="{{$students->name}}">
                 <span class="text-danger">
                     @error('name')
                         {{$message}}
@@ -48,7 +48,7 @@
             </div>
             <div class="form-group col-sm-6">
                 <label for="">Email</label>
-                <input type="text" name="email" class="form-control" >
+                <input type="text" name="email" class="form-control" value="{{$students->email}}">
                 <span class="text-danger">
                     @error('email')
                         {{$message}}
@@ -79,7 +79,7 @@
         <div class="row mt-2">
             <div class="form-group col-sm-6">
                 <label for="">Country</label>
-                <input type="text" name="country" class="form-control" >
+                <input type="text" name="country" class="form-control" value="{{$students->country}}">
                 <span class="text-danger">
                     @error('country')
                         {{$message}}
@@ -88,7 +88,7 @@
             </div>
             <div class="form-group col-sm-6">
                 <label for="">State</label>
-                <input type="text" name="state" class="form-control">
+                <input type="text" name="state" class="form-control" value="{{$students->state}}">
                 <span class="text-danger">
                     @error('state')
                         {{$message}}
@@ -99,7 +99,7 @@
         <div class="row mt-2">
             <div class="form-group col-sm-12">
                 <label for="">Address</label>
-                <input type="text" name="address" class="form-control" >
+                <input type="text" name="address" class="form-control" value="{{$students->address}}">
                 <span class="text-danger">
                     @error('address')
                         {{$message}}
@@ -110,9 +110,9 @@
         <div class="row mt-2">
             <div class="form-group col-sm-6">
                 <label for="">Gender</label><br>
-                <input type="radio" name="gender">
+                <input type="radio" name="gender" value="M" {{$students->gender == 'M' ? "checked" : ""}}>
                 <label class="mr-1 form-check-label">Male</label>
-                <input type="radio" name="gender">
+                <input type="radio" name="gender" value="F" {{$students->gender == 'F' ? "checked" : ""}}>
                 <label for="">Female</label><br>
                 <span class="text-danger">
                     @error('gender')
@@ -122,7 +122,7 @@
             </div>
             <div class="form-group col-sm-6">
                 <label for="">DoB</label>
-                <input type="date" name="dob" class="form-control" >
+                <input type="date" name="dob" class="form-control" value="{{$students->dob}}">
                 <span class="text-danger">
                     @error('dob')
                         {{$message}}

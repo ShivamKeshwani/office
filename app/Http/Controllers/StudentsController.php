@@ -25,11 +25,12 @@ class StudentsController extends Controller
      */
     public function create()
     {
+        $students = [];
         $url = url('/students-add');
         $title = "Student Regitration !!";
         $color = 'primary';
         $btname = 'SUBMIT';
-        $data = compact('url', 'title', 'color', 'btname');
+        $data = compact('url', 'title', 'color', 'btname', 'students');
         return view('register')->with($data);
     }
 
@@ -83,7 +84,7 @@ class StudentsController extends Controller
             $title = 'Student Details Update !!';
             $btname = 'Update !!';
             $data = compact('students', 'url', 'title', 'color', 'btname');
-            return view('register')->with($data);
+            return view('update')->with($data);
         }
     }
 
