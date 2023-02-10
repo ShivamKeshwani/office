@@ -17,7 +17,7 @@ class Student{
         $students->country = $request->country;
         $students->gender = $request->gender;
         $students->dob = $request->dob;
-        
+
         return $students;
     }
 }
