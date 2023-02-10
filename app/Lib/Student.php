@@ -20,4 +20,12 @@ class Student{
 
         return $students;
     }
+    public static function tocreate(){
+        $url = url('/students-add');
+        $title = "Student Regitration !!";
+        $color = 'primary';
+        $btname = 'SUBMIT';
+        $data = compact('url', 'title', 'color', 'btname');
+        return $data;
+    }
 }

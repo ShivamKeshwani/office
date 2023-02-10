@@ -26,12 +26,7 @@ class StudentsController extends Controller
      */
     public function create()
     {
-        $students = [];
-        $url = url('/students-add');
-        $title = "Student Regitration !!";
-        $color = 'primary';
-        $btname = 'SUBMIT';
-        $data = compact('url', 'title', 'color', 'btname', 'students');
+        $data = Student::tocreate();
         return view('register')->with($data);
     }
 
@@ -100,7 +95,7 @@ class StudentsController extends Controller
         $students->gender = $request->gender;
         $students->dob = $request->dob;
         $students->save();
-        return redirect('/students-view');        
+        return redirect('/students-view');
     }
 
     /**
