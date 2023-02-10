@@ -78,7 +78,7 @@
                     <a href="{{url('/')}}/students-upd/{{$student->student_id}}">
                         <button class="btn btn-primary">Edit</button>
                     </a>
-                    <a href="{{route('students.upd', ['id' => $student->student_id])}}">
+                    <a href="{{route('students.des', ['id' => $student->student_id])}}">
                         <button class="btn btn-danger">Delete</button>
                     </a>
                 </td>

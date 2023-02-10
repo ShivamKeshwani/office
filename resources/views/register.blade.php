@@ -110,9 +110,9 @@
         <div class="row mt-2">
             <div class="form-group col-sm-6">
                 <label for="">Gender</label><br>
-                <input type="radio" name="gender">
+                <input type="radio" name="gender" value = 'M'>
                 <label class="mr-1 form-check-label">Male</label>
-                <input type="radio" name="gender">
+                <input type="radio" name="gender" value="F">
                 <label for="">Female</label><br>
                 <span class="text-danger">
                     @error('gender')

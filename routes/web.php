@@ -18,6 +18,6 @@ Route::get('/', [StudentsController::class, 'index']);
 Route::get('/students-add', [StudentsController::class, 'create']);
 Route::post('/students-add', [StudentsController::class, 'store']);
 Route::get('/students-view', [StudentsController::class, 'show']);
-Route::get('/students-des/{id}', [StudentsController::class, 'destroy']);
+Route::get('/students-des/{id}', [StudentsController::class, 'destroy'])->name('students.des');
 Route::get('/students-upd/{id}', [StudentsController::class, 'edit'])->name('students.upd');
 Route::post('/students-update/{id}', [StudentsController::class, 'update']);
