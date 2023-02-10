@@ -64,17 +64,8 @@ class StudentsController extends Controller
      */
     public function edit($id)
     {
-        $students = StudentModel::find($id);
-        if (is_null($students)){
-            return redirect('/students-view');
-        }else{
-            $url = url('/students-update')."/".$id;
-            $color = 'success';
-            $title = 'Student Details Update !!';
-            $btname = 'Update !!';
-            $data = compact('students', 'url', 'title', 'color', 'btname');
-            return view('update')->with($data);
-        }
+        $data = Student::opendetails($id);
+        return view('update')->with($data);
     }
 
     /**
