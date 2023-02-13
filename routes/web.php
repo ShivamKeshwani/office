@@ -23,7 +23,9 @@ use Illuminate\Http\Request;
 Route::get('/', [PostCommentsController::class, 'index']);
 Route::get('/m', [SubscriberController::class, 'index']);
 
-
+Route::get('/g', function(){
+    return view('welcome');
+});
 /*************************************************************** */
 Route::post('article',[ArticleController::class,'store']);
 Route::get('article/{article}',[ArticleController::class,'show']);
